@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNOWLEDGE - Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000000; /* Noir */
+            color: #ffffff; /* Blanc */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #00ff66; /* Vert */
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: #00ff66;
+        }
+
+        /* Structure en deux colonnes pour le contact */
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        h1 span {
+            font-weight: 700;
+            color: #00ff66;
+        }
+
+        .info-col p {
+            color: #a0a0a0;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .contact-details {
+            list-style: none;
+        }
+
+        .contact-details li {
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .contact-details label {
+            display: block;
+            font-size: 11px;
+            color: #666666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .contact-details a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-details a:hover {
+            color: #00ff66;
+        }
+
+        /* Formulaire de contact épuré */
+        .form-col form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .input-group input, 
+        .input-group textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #333333;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #ffffff;
+            outline: none;
+            transition: border-color 0.4s ease;
+        }
+
+        /* Ajustement spécifique pour la zone de texte du message */
+        .input-group textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            border-bottom: 1px solid #00ff66;
+        }
+
+        .input-group label {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: #666666;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .input-group input:focus ~ label,
+        .input-group input:valid ~ label,
+        .input-group textarea:focus ~ label,
+        .input-group textarea:valid ~ label {
+            top: -15px;
+            font-size: 11px;
+            color: #00ff66;
+            letter-spacing: 1px;
+        }
+
+        .submit-container {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .submit-link {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 1px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .submit-link:hover {
+            color: #00ff66;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #444444;
+            border-top: 1px solid #111111;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <a href="#" class="logo">KNOWLEDGE<span>.</span></a>
+        <nav>
+            <a href="#">Cours</a>
+            <a href="#">Mon Espace</a>
+            <a href="#" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Contenu Principal -->
+    <main>
+        <!-- Colonne gauche : Informations -->
+        <div class="info-col">
+            <h1>Restons en <span>contact</span>.</h1>
+            <p>Une question sur nos formations ou besoin d'une assistance technique ? Notre équipe vous répond sous 24 heures.</p>
+            
+            <ul class="contact-details">
+                <li>
+                    <label>E-mail</label>
+                    <a href="mailto:hello@knowledge.com">hello@knowledge.com</a>
+                </li>
+                <li>
+                    <label>Téléphone</label>
+                    <a href="tel:+33100000000">+33 (0)1 00 00 00 00</a>
+                </li>
+                <li>
+                    <label>Support Éléves</label>
+                    <a href="#">support.knowledge.com</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Colonne droite : Formulaire sans bouton -->
+        <div class="form-col">
+            <form action="#" method="POST">
+                
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Votre nom</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" required>
+                    <label>Adresse e-mail</label>
+                </div>
+
+                <div class="input-group">
+                    <textarea required></textarea>
+                    <label>Votre message</label>
+                </div>
+
+                <div class="submit-container">
+                    <button type="submit" class="submit-link">Envoyer le message &#8594;</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 KNOWLEDGE. Tous droits réservés.</p>
+        <p>Simplicité &bull; Clarté</p>
+    </footer>
+
+</body>
+</html>

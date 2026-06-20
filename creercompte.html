@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNOWLEDGE - Créer un compte</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000000; /* Noir */
+            color: #ffffff; /* Blanc */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #00ff66; /* Vert */
+        }
+
+        .back-link {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #00ff66;
+        }
+
+        main {
+            max-width: 450px;
+            width: 100%;
+            margin: auto; /* Centre verticalement et horizontalement le formulaire */
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 40px;
+        }
+
+        h1 span {
+            font-weight: 700;
+            color: #00ff66;
+        }
+
+        /* Style des champs de saisie ultra-simples */
+        .input-group {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .input-group input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #333333; /* Ligne grise par défaut */
+            padding: 10px 0;
+            font-size: 16px;
+            color: #ffffff;
+            outline: none;
+            transition: border-color 0.4s ease;
+        }
+
+        /* Quand on clique dans le champ, la ligne devient verte */
+        .input-group input:focus {
+            border-bottom: 1px solid #00ff66;
+        }
+
+        .input-group label {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: #666666;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        /* Animation du label qui monte quand le champ est rempli ou focus */
+        .input-group input:focus ~ label,
+        .input-group input:valid ~ label {
+            top: -15px;
+            font-size: 11px;
+            color: #00ff66;
+            letter-spacing: 1px;
+        }
+
+        /* Remplacement du bouton par un lien de validation textuel */
+        .submit-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .submit-link {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit-link:hover {
+            color: #00ff66; /* Devient vert au survol */
+        }
+
+        .switch-mode {
+            font-size: 13px;
+            color: #666666;
+        }
+
+        .switch-mode a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .switch-mode a:hover {
+            color: #00ff66;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #444444;
+            border-top: 1px solid #111111;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <a href="#" class="logo">KNOWLEDGE<span>.</span></a>
+        <a href="#" class="back-link">Retour</a>
+    </header>
+
+    <!-- Formulaire d'inscription -->
+    <main>
+        <h1>Créer un <span>compte</span>.</h1>
+        
+        <form action="#" method="POST">
+            
+            <div class="input-group">
+                <input type="text" required>
+                <label>Nom complet</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" required>
+                <label>Adresse e-mail</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" required>
+                <label>Mot de passe</label>
+            </div>
+
+            <!-- Zone de validation sans bouton traditionnel -->
+            <div class="submit-container">
+                <span class="switch-mode">Déjà membre ? <a href="#">Connexion</a></span>
+                <!-- Utilisation d'un élément type button mais stylisé à 100% comme un lien textuel -->
+                <button type="submit" class="submit-link">Confirmer &#8594;</button>
+            </div>
+
+        </form>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 KNOWLEDGE. Environnement sécurisé.</p>
+    </footer>
+
+</body>
+</html>

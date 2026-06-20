@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Académie En Ligne - Accueil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000000; /* Noir */
+            color: #ffffff; /* Blanc */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #00ff66; /* Vert */
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: #00ff66; /* Accent vert au survol */
+        }
+
+        main {
+            max-width: 900px;
+            margin-top: -5vh;
+        }
+
+        .sur-titre {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #00ff66; /* Vert */
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            font-weight: 700;
+        }
+
+        .intro {
+            font-size: 18px;
+            color: #a0a0a0; /* Blanc adouci */
+            max-width: 650px;
+            line-height: 1.6;
+            margin-bottom: 50px;
+        }
+
+        /* Section des filières / cours (remplace les boutons) */
+        .categories {
+            display: flex;
+            gap: 40px;
+        }
+
+        .cat-item {
+            border-left: 2px solid #222222;
+            padding-left: 20px;
+            transition: border-color 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .cat-item:hover {
+            border-color: #00ff66; /* Le bord devient vert au survol */
+        }
+
+        .cat-item h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cat-item p {
+            font-size: 13px;
+            color: #666666;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #444444;
+            border-top: 1px solid #111111;
+            padding-top: 20px;
+        }
+
+        footer a {
+            color: #444444;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: #00ff66;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête de la plateforme -->
+    <header>
+        <div class="logo">KNOWLEDGE<span>.</span></div>
+        <nav>
+            <a href="#" class="active">Cours</a>
+            <a href="#">Formateurs</a>
+            <a href="#">Mon Espace</a>
+        </nav>
+    </header>
+
+    <!-- Contenu Principal -->
+    <main>
+        <div class="sur-titre">Apprendre à votre rythme</div>
+        <h1>Développez vos compétences par la <span>clarté</span>.</h1>
+        <p class="intro">Accédez à des formations de haut niveau, pensées pour aller droit à l'essentiel. Pas de distraction, juste du savoir brut enseigné par des experts.</p>
+        
+        <!-- Navigation vers les disciplines (Liens textuels verticaux) -->
+        <div class="categories">
+            <a href="#" class="cat-item">
+                <h3>Design & Graphisme</h3>
+                <p>12 modules disponibles</p>
+            </a>
+            <a href="#" class="cat-item">
+                <h3>Développement Web</h3>
+                <p>24 modules disponibles</p>
+            </a>
+            <a href="#" class="cat-item">
+                <h3>Sciences des Données</h3>
+                <p>8 modules disponibles</p>
+            </a>
+        </div>
+    </main>
+
+    <!-- Pied de page discret -->
+    <footer>
+        <p>&copy; 2026 E-Learning Platform.</p>
+        <p><a href="#">Mentions légales</a> &bull; <a href="#">Aide</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Enseignant - Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000000; /* Noir */
+            color: #ffffff; /* Blanc */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #00ff66; /* Vert */
+        }
+
+        .user-profile {
+            font-size: 14px;
+            color: #a0a0a0;
+        }
+
+        .user-profile span {
+            color: #00ff66;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 1000px;
+            margin-top: -2vh;
+        }
+
+        .sur-titre {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #00ff66;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 40px;
+        }
+
+        h1 span {
+            font-weight: 700;
+        }
+
+        /* Grille d'actions pour l'enseignant (sans boutons) */
+        .grid-enseignant {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+        .section-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        .section-link:hover .line-accent {
+            width: 100%;
+            background-color: #00ff66;
+        }
+
+        .section-link h2 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        /* Fine ligne sous les titres qui s'anime au survol */
+        .line-accent {
+            width: 30px;
+            height: 1px;
+            background-color: #333333;
+            margin-bottom: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .section-link p {
+            font-size: 14px;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+
+        .stat-discrete {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .stat-discrete span {
+            color: #ffffff;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #444444;
+            border-top: 1px solid #111111;
+            padding-top: 20px;
+        }
+
+        footer a {
+            color: #444444;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #00ff66;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête de l'espace enseignant -->
+    <header>
+        <div class="logo">KNOWLEDGE<span>.</span></div>
+        <div class="user-profile">Prof. <span>Alexandre</span></div>
+    </header>
+
+    <!-- Contenu Principal -->
+    <main>
+        <div class="sur-titre">Tableau de bord de transmission</div>
+        <h1>Votre espace de <span>gestion</span> et de cours.</h1>
+        
+        <!-- Menu principal sous forme de blocs textuels épurés -->
+        <div class="grid-enseignant">
+            
+            <!-- Bloc 1 : Gestion des cours -->
+            <a href="#" class="section-link">
+                <h2>Vos Formations</h2>
+                <div class="line-accent"></div>
+                <p>Créer, modifier et organiser vos chapitres, vos ressources multimédias et vos exercices en ligne.</p>
+                <div class="stat-discrete"><span>4</span> cours actifs</div>
+            </a>
+
+            <!-- Bloc 2 : Suivi des étudiants -->
+            <a href="#" class="section-link">
+                <h2>Suivi & Élèves</h2>
+                <div class="line-accent"></div>
+                <p>Consulter les progressions individuelles, analyser les statistiques de réussite et valider les compétences.</p>
+                <div class="stat-discrete"><span>142</span> étudiants inscrits</div>
+            </a>
+
+            <!-- Bloc 3 : Évaluations -->
+            <a href="#" class="section-link">
+                <h2>Copies & Devoirs</h2>
+                <div class="line-accent"></div>
+                <p>Accéder aux travaux rendus, soumettre vos corrections textuelles et attribuer les validations de modules.</p>
+                <div class="stat-discrete"><span>12</span> corrections en attente</div>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 E-Learning Platform &bull; Mode Enseignant</p>
+        <p><a href="#">Déconnexion</a></p>
+    </footer>
+
+</body>
+</html>
